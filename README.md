@@ -80,5 +80,8 @@ variable, but it's also possible to set it in the config file.
 ## Deploy
 
 After configuring everything a `$ mvn clean package` creates a so called deploy package in the target folder, which is
-a zip file consists of a fat jar, a Procfile, which tells EB how and which file to run and the ebextensions folder, 
-which contains the deploy instructions for Beanstalk.
+a zip file containing everything EB needs to get going:
+
+- The fat jar 
+- The Procfile, which tells EB how and which file to run
+- The .ebextensions folder, which contains the deploy instructions for Beanstalk
