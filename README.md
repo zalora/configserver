@@ -29,7 +29,7 @@ String: `$ echo "Hello Config Server" | base64 -w 0`
 
 The file contains 4 sections:
 
-### config
+#### config
 
 ```
 host git-codecommit.*.amazonaws.com
@@ -57,11 +57,11 @@ AWS user has to right permissions to access the repo. You can do that by assigni
 }
 ```
 
-### id_rsa + id_rsa.pub
+#### id_rsa + id_rsa.pub
 
 Add the key you uploaded to for your IAM user before and add it in the corresponsing places in the config file.
 
-### known_hosts
+#### known_hosts
 
 You can either disable the host key checks, which is absolutely not recommended or add the Amazons's CodeCommit host to
 the `known_hosts` file. Amazon publishes their fingerprints [here](http://docs.aws.amazon.com/codecommit/latest/userguide/setting-up-ssh-unixes.html), 
