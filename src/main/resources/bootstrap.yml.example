@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: configserver
+  cloud:
+    config:
+      server:
+        health:
+          enabled: false
+        git:
+          basedir: repo
+          clone-on-start: true
+          uri: ssh://git-codecommit.us-west-2.amazonaws.com/v1/repos/spring-config-server
+
+server.port: 5000
+
+# Can be set as an ENV variable in AWS EB, too
+encrypt.key: "ZALORA"

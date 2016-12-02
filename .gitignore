@@ -1,0 +1,32 @@
+*.class
+hs_err_pid*
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.war
+*.ear
+
+# IDE
+.classpath
+.project
+.settings
+*.iml
+.idea
+
+# Maven
+target
+
+# log files
+*.log
+
+# Repo
+/repo
+
+# Java Key Store Files
+*.jks
+
+/stuffs
+/.ebextensions/*.config
+/src/main/resources/bootstrap.yml
