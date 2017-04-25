@@ -15,3 +15,6 @@ server.port: 5000
 
 # Can be set as an ENV variable in AWS EB, too
 encrypt.key: "ZALORA"
+
+# Disable security for spring-boot actuator endpoints
+management.security.enabled: false
