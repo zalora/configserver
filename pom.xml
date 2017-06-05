@@ -5,7 +5,7 @@
 
     <groupId>com.zalora</groupId>
     <artifactId>configserver</artifactId>
-    <version>1.1.15</version>
+    <version>1.1.16</version>
     <packaging>jar</packaging>
 
     <name>configserver</name>
@@ -36,6 +36,12 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.getsentry.raven</groupId>
+            <artifactId>raven-logback</artifactId>
+            <version>8.0.3</version>
         </dependency>
     </dependencies>
 
@@ -73,7 +79,7 @@
                                 </exec>
 
                                 <exec executable="echo" output="target/Procfile">
-                                    <arg line="web: java -server -Xmx${cs.xmx} -Xms${cs.xms} -jar configserver-${project.version}.jar"/>
+                                    <arg line="web: java -server -Xmx${cs.xmx} -Xms${cs.xms} -Dsentry.release=${project.version} -jar configserver-${project.version}.jar" />
                                 </exec>
 
                                 <copy todir="target/.ebextensions">
